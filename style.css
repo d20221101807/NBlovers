@@ -1,0 +1,172 @@
+/* General Styles */
+body {
+    font-family: Serif, garamound;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #7BD3EA;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+.header-logo {
+    height: 100px;
+    width: auto;
+    margin-right: 15px;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Styles for the main section images */
+.image-container {
+    display: flex; /* Arrange images in a row */
+    justify-content: center; /* Center the images */
+    gap: 15px; /* Add space between images */
+    margin: 20px auto; /* Center the container and add top/bottom spacing */
+    max-width: 90%; /* Optional: Limit container width */
+}
+
+/* Default style for individual images */
+.main-image {
+    width: 30%; /* Default image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animation */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Hover effect: enlarge image and enhance shadow */
+.main-image:hover {
+    transform: scale(1.1); /* Enlarge the image */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Bigger shadow */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .main-image {
+        width: 100%; /* Stack images vertically on small screens */
+    }
+
+    .image-container {
+        flex-direction: column; /* Stack images */
+        gap: 10px; /* Adjust spacing */
+    }
+}
+
+/* Moving text container */
+.moving-text {
+    overflow: hidden; /* Ensures text doesn't overflow outside the container */
+    white-space: nowrap; /* Prevents the text from breaking to a new line */
+    box-sizing: border-box;
+    width: 100%; /* Full width of the page */
+    background-color: #f4f4f4; /* Background color for the text */
+    padding: 0px 0; /* Padding for better visibility */
+}
+
+/* Text animation */
+.moving-text p {
+    display: inline-block;
+    font-size: 18px; /* Adjust font size */
+    color: #333; /* Text color */
+    animation: move-left 15s linear infinite; /* Animation name, duration, and loop */
+}
+
+/* Keyframes for left-to-right animation */
+@keyframes move-left {
+    0% {
+        transform: translateX(100%); /* Start outside the right edge */
+    }
+    100% {
+        transform: translateX(-100%); /* End outside the left edge */
+    }
+}
+
+
+footer {
+    text-align: center;
+    padding: 1px 0;
+    background-color: #7BD3EA;
+    color: #fff;
+    position: absolute;
+    bottom: 2;
+    width: 100%;
+}
+
+/*About*/
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width:90%; /* Make the video wider */
+    margin: 50px auto; /* Center the video */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 70%;
+    border: none;
+}
+	/* Image grid container */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four items per row */
+    gap: 20px; /* Space between grid items */
+    justify-content: center; /* Center the grid horizontally */
+    text-align: center; /* Center-align text and images */
+    padding: 20px; /* Add padding around the grid */
+}
+
+/* Individual grid items */
+.grid-item {
+    display: flex;
+    flex-direction: column; /* Stack image and text */
+    align-items: center; /* Center-align content */
+}
+
+/* Images in the grid */
+.grid-item img {
+    width: 250px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Maintain aspect ratio and fit */
+    border-radius: 8px; /* Optional: rounded corners */
+    transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+}
+
+/* Text below the images */
+.grid-item p {
+    margin-top: 10px; /* Space between image and text */
+    font-size: 16px;
+    color: #333;
+}
+
+/* Hover effect on images */
+.grid-item img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    cursor: pointer; /* Change cursor to indicate a clickable link */
+}
+
+
+
