@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBlovers</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="icon" href="C:\SEM5\DTD3033\laragon\www\Ass1\img\heart-regular.svg" type="image/svg">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+	
+	<img src="C:\SEM5\DTD3033\laragon\www\Ass1\img\new-balance-2-logo-black-and-white.png" alt="Website Logo" class="header-logo">
+	<nav style=" font-size:20px;">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="530.html">530</a>
+            <a href="2002r.html">2002r</a>
+            <a href="1906.html">1906</a>
+            <a href="9060.html">9060</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+		
+    </header>
+	
+	<div id="date-container"></div> <!-- This is where the date will appear -->
+	
+    <main>
+        <h1>Welcome NB Lovers !</h1>
+        <p>This is a place where we share information about some of our trending shoes in 2024 and a guidance on how to style them.</p>
+		<div class="image-container">
+        <img src="C:\SEM5\DTD3033\laragon\www\Ass1\img\main1.jpg" alt="Image 1" class="main-image">
+        <img src="C:\SEM5\DTD3033\laragon\www\Ass1\img\main2.jpg" alt="Image 2" class="main-image">
+        <img src="C:\SEM5\DTD3033\laragon\www\Ass1\img\main3.jpg" alt="Image 3" class="main-image">
+    </div>
+	<div>
+	<h2>Why Choose New Balance Lifestyle Shoes?</h2>
+	<p>New Balance’s lifestyle models like the 530, 2002R, 1906, and 9060 offer more than just timeless style—they prioritize comfort, versatility, and individuality. Whether you're pairing them with athleisure, denim, or tailored fits, these shoes deliver unmatched adaptability to suit any lifestyle.
+
+	Key Features:
+
+	Durable materials like suede, mesh, and leather.
+	Advanced cushioning technologies (ABZORB, N-ERGY, and Stability Web).
+	Retro-meets-modern designs for trend-conscious individuals.
+	</p>
+	
+    </main>
+	
+	<!-- Inline JavaScript to display the date -->
+    <script>
+        // Get the current date
+        const today = new Date();
+
+        // Format the date
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedDate = today.toLocaleDateString('en-US', options);
+
+        // Insert the date into the "date-container" div
+        document.getElementById('date-container').textContent = formattedDate;
+    </script>
+	
+	<div class="moving-text">
+    <p>Welcome to our website! Explore our amazing lifestyle shoes!</p>
+	</div>
+	
+    <footer>
+        &copy; 2024 NBlovers
+    </footer>
+</body>
+</html>
